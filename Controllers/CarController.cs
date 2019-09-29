@@ -25,9 +25,18 @@ namespace api.Controllers
                           new Feature { Name = "Automatic transimision"}
                          }
                 }
-              
             };
             return Ok(cars);
+        }
+
+        [Route("features")]
+        public IActionResult Features()
+        {
+            var features = new List<Feature>{
+                               new Feature { Name = "Lethear seat"},
+                               new Feature { Name = "Automatic transimision"}
+                            };
+                return Ok(features);
         }
     }
 }
